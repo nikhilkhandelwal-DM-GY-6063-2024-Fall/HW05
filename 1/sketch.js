@@ -2,7 +2,7 @@ let cloudSize=150;
 let dreamColor;
 let starX,starY,starSize;
 let targetX,targetY;
-let speed=2;
+let speed=4;
 let moving=false;
 
 function setup() {
