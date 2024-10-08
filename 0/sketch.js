@@ -7,7 +7,7 @@ function draw() {
   background(0); 
   
   translate(width/2, height/2);
-  rotate(-90);
+  rotate(-90); // Rotated -90 degrees to start the clock at the top (12 o'clock)
   
   let hr=hour();
   let mn=minute();
@@ -18,16 +18,17 @@ function draw() {
   noFill();
   ellipse(0,0,400,400);
   
+  // Seconds hand
   let secondAngle=map(sc,0,60,0,360);
   stroke(255, 0, 0);
   strokeWeight(4);
   line(0,0,150*cos(secondAngle),150*sin(secondAngle));
-  
+  // Minutes hand
   let minuteAngle = map(mn,0,60,0,360);
   stroke(255);
   strokeWeight(6);
   line(0, 0, 120 * cos(minuteAngle), 120 * sin(minuteAngle));
-  
+  // Hours hand
   let hourAngle = map(hr%12,0,12,0,360);
   stroke(100,255,100);
   strokeWeight(8);
